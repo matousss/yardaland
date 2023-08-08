@@ -11,7 +11,7 @@ const Globe = () => {
   const circles = 4
 
   return <div ref={ref}>
-    <svg className='h-[50vw] w-[50vw]' strokeWidth={strokeWidth} >
+    <svg className='h-[18rem] w-[18rem] md:h-[28rem] md:w-[28rem]' strokeWidth={strokeWidth} >
       {/* {Array.from({length: xPaths}, (_, i) => (
           <path 
             key={i} 
@@ -45,7 +45,7 @@ const Globe = () => {
             className='origin-center animate-spin-y direction-reverse'
             cx={'50%'}
             cy={'50%'}
-            r={'49%'}
+            r={'45%'}
             fill='transparent'
             fillOpacity={0.05}
           />
@@ -66,7 +66,7 @@ const Globe = () => {
             className='origin-center animate-spin-y direction-reverse'
             cx={'50%'}
             cy={'50%'}
-            r={'49%'}
+            r={'45%'}
             fill='transparent'
           />
         ))}
@@ -75,7 +75,7 @@ const Globe = () => {
       <circle
         cx={'50%'}
         cy={'50%'}
-        r={'49%'}
+        r={'45%'}
         fill='transparent'
         fillOpacity={0.05}
       />

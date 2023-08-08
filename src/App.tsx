@@ -8,7 +8,7 @@ function App() {
     <>
       <Route path='/info'>
         <div className={'flex h-[100vh] bg-primary'}>
-          <div className={'m-auto flex  h-1/3 w-1/2 rounded-lg bg-slate-800 text-xl'}>
+          <div className={'mx-auto mt-0  md:my-auto flex  md:h-1/3 md:w-1/2 md:rounded-lg md:bg-slate-800 text-xl'}>
             <div className={'relative m-auto flex flex-col text-white'}>
               <div>
                 Site is under construction...
