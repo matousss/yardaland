@@ -1,39 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { Route } from 'wouter'
-import {Index} from './sites'
+import { Link, Route } from 'wouter'
+import { Sphere } from './sites'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Route path='/temp'>
-        <div>
-          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank" rel="noreferrer">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
+      <Route path='/info'>
+        <div className={'flex h-[100vh] bg-primary'}>
+          <div className={'m-auto flex  h-1/3 w-1/2 rounded-lg bg-slate-800 text-xl'}>
+            <div className={'relative m-auto flex flex-col text-white'}>
+              <div>
+                Site is under construction...
+              </div>
+              <Link to='/' className={'absolute right-2 top-8 m-auto mt-0 w-full text-center text-sm text-gray-300 duration-200 hover:text-white'}>
+                {'<- Go back to sphere'}
+              </Link>
+            </div>
+
+          </div>
         </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
       </Route>
       <Route path='/'>
-        <Index/>
+        <Sphere />
       </Route>
     </>
   )
